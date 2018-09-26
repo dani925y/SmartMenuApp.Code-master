@@ -13,7 +13,6 @@ namespace SmartMenuLibrary
             Console.WriteLine("Choose Language");
             Console.WriteLine("1. Dansk");
             Console.WriteLine("2. English");
-            }
         }
         public void Activate()
         {
