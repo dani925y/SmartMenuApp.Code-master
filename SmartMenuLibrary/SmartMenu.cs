@@ -53,5 +53,5 @@ namespace SmartMenuLibrary
         {
             // Implement ...
         }
-    }
+    } // Husk at kigge på tekstens farve ændring
 }
