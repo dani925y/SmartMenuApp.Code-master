@@ -23,6 +23,8 @@ namespace SmartMenuLibrary
                 case "2":
                     goto englishMenu;
                     break;
+                case "0":
+                    return;
             }
 
 
