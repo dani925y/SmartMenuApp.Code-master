@@ -10,9 +10,9 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            Console.WriteLine("Choose Language");
-            Console.WriteLine("1. Dansk");
-            Console.WriteLine("2. English");
+            Console.WriteLine("Choose Language/Vælg Sprog");
+            Console.WriteLine("1. Dansk/Danish");
+            Console.WriteLine("2. English/Engelsk");
             Console.WriteLine("0. Exit");
             string langChoice = Console.ReadLine();
             switch (langChoice)
