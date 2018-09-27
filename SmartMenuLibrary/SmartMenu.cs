@@ -18,10 +18,10 @@ namespace SmartMenuLibrary
             switch (langChoice)
             {
                 case "1":
-                    goto danskMenu;
+                    //danskMenu;
                     break;
                 case "2":
-                    goto englishMenu;
+                    //englishMenu;
                     break;
                 case "0":
                     return;
