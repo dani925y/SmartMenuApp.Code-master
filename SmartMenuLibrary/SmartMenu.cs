@@ -11,6 +11,15 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
+            System.IO.StreamReader file =
+            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
+        }
+
+
+
+
+        public void Activate()
+        {
             Console.WriteLine("Choose Language/Vælg Sprog");
             Console.WriteLine("1. Dansk/Danish");
             Console.WriteLine("2. English/Engelsk");
@@ -27,12 +36,7 @@ namespace SmartMenuLibrary
                 case "0":
                     return;
             }
-        }
 
-        public void DanskMenu()
-        {
-            System.IO.StreamReader file =
-            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
             Console.WriteLine("1. Punkt");
             Console.WriteLine("2. Punkt");
             Console.WriteLine("3. Punkt");
@@ -52,7 +56,7 @@ namespace SmartMenuLibrary
                     Functions.DoSomething();
                     break;
                 case "4":
-                    FunctionsGetTheAnswerToLifeTheUniverseAndEverything();
+                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
                     break;
                 case "5":
                     LoadMenu();
@@ -61,47 +65,6 @@ namespace SmartMenuLibrary
                     return;
             }
 
-        }
-
-        public void EnglishMenu()
-        {
-            string line;
-
-            System.IO.StreamReader file =
-            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
-            line = file.ReadToEnd();
-            Console.WriteLine("1. Punkt");
-            Console.WriteLine("2. Punkt");
-            Console.WriteLine("3. Punkt");
-            Console.WriteLine("4. Punkt");
-            Console.WriteLine("5. Back to first menu");
-            Console.WriteLine("0. Exit");
-            string menuChoiceEN = Console.ReadLine();
-            /*switch (menuChoiceEN)
-            {
-                case "1":
-                    DoThis();
-                    break;
-                case "2":
-                    DoThat();
-                    break;
-                case "3":
-                    DoSomething();
-                    break;
-                case "4":
-                    GetTheAnswerToLifeTheUniverseAndEverything();
-                    break;
-                case "5":
-                    LoadMenu();
-                    break;
-                case "0":
-                    return;
-            }*/
-        }
-
-        public void Activate()
-        {
-            // Implement ...
-        }
-    } // Husk at kigge på tekstens farve ændring
+        }// Husk at kigge på tekstens farve ændring
+    }
 }
