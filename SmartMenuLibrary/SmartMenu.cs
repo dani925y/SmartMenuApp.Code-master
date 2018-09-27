@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FunctionLibrary;
 
 namespace SmartMenuLibrary
 {
@@ -39,26 +40,26 @@ namespace SmartMenuLibrary
             Console.WriteLine("5. Tilbage til sporg valg");
             Console.WriteLine("0. Exit");
             string menuChoiceDK = Console.ReadLine();
-            /*switch (menuChoiceDK)
+            switch (menuChoiceDK)
             {
                 case "1":
-                    DoThis();
+                    Functions.DoThis();
                     break;
                 case "2":
-                    DoThat();
+                    Functions.DoThat();
                     break;
                 case "3":
-                    DoSomething();
+                    Functions.DoSomething();
                     break;
                 case "4":
-                    GetTheAnswerToLifeTheUniverseAndEverything();
+                    FunctionsGetTheAnswerToLifeTheUniverseAndEverything();
                     break;
                 case "5":
                     LoadMenu();
                     break;
                 case "0":
                     return;
-            }*/
+            }
 
         }
 

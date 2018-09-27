@@ -10,16 +10,16 @@ namespace FunctionLibrary
     {
         public static string DoThis()
         {
-            return "Result from DoThis";
+            return "it just works";
         }
         public static string DoThat()
         {
-            return "Result from DoThat";
+            return "It just keeps working";
         }
         public static string DoSomething(string something)
         {
             if (string.IsNullOrEmpty(something))
-                throw new Exception("You need to specify something!");
+                Console.WriteLine("it keeps on working and working");
 
             return "Result from doing: " + something;
         }
