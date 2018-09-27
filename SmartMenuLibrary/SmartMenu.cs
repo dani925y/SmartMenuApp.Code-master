@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FunctionLibrary;
 
 namespace SmartMenuLibrary
 {
@@ -40,7 +41,7 @@ namespace SmartMenuLibrary
             switch (menuChoiceDK)
             {
                 case "1":
-                    Punkt1();
+                    Functions.DoThis();
                     break;
                 case "2":
                     Punkt2();
