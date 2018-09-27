@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FunctionLibrary;
 
 namespace SmartMenuLibrary
 {
@@ -31,6 +30,8 @@ namespace SmartMenuLibrary
 
         public void DanskMenu()
         {
+            System.IO.StreamReader file =
+            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
             Console.WriteLine("1. Punkt");
             Console.WriteLine("2. Punkt");
             Console.WriteLine("3. Punkt");
@@ -38,31 +39,36 @@ namespace SmartMenuLibrary
             Console.WriteLine("5. Tilbage til sporg valg");
             Console.WriteLine("0. Exit");
             string menuChoiceDK = Console.ReadLine();
-            switch (menuChoiceDK)
+            /*switch (menuChoiceDK)
             {
                 case "1":
-                    Functions.DoThis();
+                    DoThis();
                     break;
                 case "2":
-                    Punkt2();
+                    DoThat();
                     break;
                 case "3":
-                    Punkt3();
+                    DoSomething();
                     break;
                 case "4":
-                    Punkt4();
+                    GetTheAnswerToLifeTheUniverseAndEverything();
                     break;
                 case "5":
                     LoadMenu();
                     break;
                 case "0":
                     return;
-            }
+            }*/
 
         }
 
         public void EnglishMenu()
         {
+            string line;
+
+            System.IO.StreamReader file =
+            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
+            line = file.ReadToEnd();
             Console.WriteLine("1. Punkt");
             Console.WriteLine("2. Punkt");
             Console.WriteLine("3. Punkt");
@@ -70,27 +76,26 @@ namespace SmartMenuLibrary
             Console.WriteLine("5. Back to first menu");
             Console.WriteLine("0. Exit");
             string menuChoiceEN = Console.ReadLine();
-            switch (menuChoiceEN)
+            /*switch (menuChoiceEN)
             {
                 case "1":
-                    Punkt1();
+                    DoThis();
                     break;
                 case "2":
-                    Punkt2();
+                    DoThat();
                     break;
                 case "3":
-                    Punkt3();
+                    DoSomething();
                     break;
                 case "4":
-                    Punkt4();
+                    GetTheAnswerToLifeTheUniverseAndEverything();
                     break;
                 case "5":
                     LoadMenu();
                     break;
                 case "0":
                     return;
-
-            }
+            }*/
         }
 
         public void Activate()
