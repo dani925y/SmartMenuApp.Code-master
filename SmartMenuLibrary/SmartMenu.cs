@@ -18,20 +18,18 @@ namespace SmartMenuLibrary
             switch (langChoice)
             {
                 case "1":
-                    //danskMenu;
+                    DanskMenu();
                     break;
                 case "2":
-                    //englishMenu;
+                    EnglishMenu();
                     break;
                 case "0":
                     return;
             }
+        }
 
-
-
-
-
-
+        public void DanskMenu()
+        {
             Console.WriteLine("1. Punkt");
             Console.WriteLine("2. Punkt");
             Console.WriteLine("3. Punkt");
@@ -39,8 +37,31 @@ namespace SmartMenuLibrary
             Console.WriteLine("5. Tilbage til sporg valg");
             Console.WriteLine("0. Exit");
             string menuChoiceDK = Console.ReadLine();
+            switch (menuChoiceDK)
+            {
+                case "1":
+                    Punkt1();
+                    break;
+                case "2":
+                    Punkt2();
+                    break;
+                case "3":
+                    Punkt3();
+                    break;
+                case "4":
+                    Punkt4();
+                    break;
+                case "5":
+                    LoadMenu();
+                    break;
+                case "0":
+                    return;
+            }
 
+        }
 
+        public void EnglishMenu()
+        {
             Console.WriteLine("1. Punkt");
             Console.WriteLine("2. Punkt");
             Console.WriteLine("3. Punkt");
@@ -48,10 +69,32 @@ namespace SmartMenuLibrary
             Console.WriteLine("5. Back to first menu");
             Console.WriteLine("0. Exit");
             string menuChoiceEN = Console.ReadLine();
+            switch (menuChoiceEN)
+            {
+                case "1":
+                    Punkt1();
+                    break;
+                case "2":
+                    Punkt2();
+                    break;
+                case "3":
+                    Punkt3();
+                    break;
+                case "4":
+                    Punkt4();
+                    break;
+                case "5":
+                    LoadMenu();
+                    break;
+                case "0":
+                    return;
+
+            }
         }
+
         public void Activate()
         {
             // Implement ...
         }
-    }
+    } // Husk at kigge på tekstens farve ændring
 }
