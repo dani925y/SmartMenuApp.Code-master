@@ -1,6 +1,6 @@
-﻿Titel
-Menupunkterne vælges ved brug af numrene 1-4, hvis i vil forlade menuen skal i taste 0.
-Punkt 1
-Punkt 2
-Punkt 3
-Punkt 4
+﻿<Menu titel>
+<Det her er hvad vores menu indeholder og gør xd>
+<Punkt 1>;<1>
+<Punkt 2>;<>
+<Punkt 3>;<>
+<Punkt 4>;<>
