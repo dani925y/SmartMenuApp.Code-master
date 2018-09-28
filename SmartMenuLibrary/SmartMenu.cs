@@ -18,52 +18,59 @@ namespace SmartMenuLibrary
         {
             Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
 
+            //char menuinput er character input - det som bliver indskrevet
             char menuInput;
             menuInput = char.Parse(Console.ReadLine());
             string line;
             int counter = 0;
             char menuInputEN;
-            menuInputEN = char.Parse(Console.ReadLine());
             char menuInputDK;
-            menuInputDK= char.Parse(Console.ReadLine());
 
-            while (menuInput == 1)
+            //vælger punkt 1
+            while (menuInput == '1')
             {
+                //indlæser engelsk tekstfil med metoder vi lærte i mandags
                 System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
                 while((line = file.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
                         counter++;
                 }
+                //herunder vælger den hvad outputtet er alt efter hvad indputtet er
+                menuInputEN = char.Parse(Console.ReadLine());
 
-                while (menuInputEN == 1)
+                //indputtet er 1 og outputter er dothis fra functions - lige nu looper den bare for evigt though lol
+                while (menuInputEN == '1')
                 {
-                    Functions.DoThis();
+                     Console.WriteLine(Functions.DoThis());
                 }
 
-                while (menuInputEN == 2)
+                while (menuInputEN == '2')
                 {
-                    Functions.DoThat();
+                    Console.WriteLine(Functions.DoThat());
                 }
 
-                while (menuInputEN == 3)
+                while (menuInputEN == '3')
                 {
+                    //den her skal have et string indput for at fungere, derfor er der først defineret en string som læser det som man indtaster 
                     string doSomethingInput = Console.ReadLine();
-                    Functions.DoSomething(doSomethingInput);
+                    Console.WriteLine(Functions.DoSomething(doSomethingInput));
                 }
 
-                while (menuInputEN == 4)
+                while (menuInputEN == '4')
                 {
-                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
                 }
 
-                while (menuInputDK == 0)
+                while (menuInputEN == '0')
                 {
+                    //afslutter programmet
                     Environment.Exit(0);
                 }
             }
 
-            while (menuInput == 2)
+            //præcis det samme som øverst, bare repeat på dansk
+            while (menuInput == '2')
             {
                 System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
                 while ((line = file.ReadLine()) != null)
@@ -71,35 +78,36 @@ namespace SmartMenuLibrary
                     Console.WriteLine(line);
                     counter++;
                 }
+                menuInputDK = char.Parse(Console.ReadLine());
 
-                while (menuInputDK == 1)
+                while (menuInputDK == '1')
                 {
-                    Functions.DoThis();
+                    Console.WriteLine(Functions.DoThis());
                 }
 
-                while (menuInputDK == 2)
+                while (menuInputDK == '2')
                 {
-                    Functions.DoThat();
+                    Console.WriteLine(Functions.DoThat());
                 }
 
-                while (menuInputDK == 3)
+                while (menuInputDK == '3')
                 {
                     string doSomethingInput = Console.ReadLine();
-                    Functions.DoSomething(doSomethingInput);
+                    Console.WriteLine(Functions.DoSomething(doSomethingInput));
                 }
 
-                while (menuInputDK == 4)
+                while (menuInputDK == '4')
                 {
-                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
                 }
 
-                while (menuInputDK == 0)
+                while (menuInputDK == '0')
                 {
                     Environment.Exit(0);
                 }
             
 
-            while (menuInput == 0)
+            while (menuInput == '0')
                 {
                     Environment.Exit(0);
                 }
