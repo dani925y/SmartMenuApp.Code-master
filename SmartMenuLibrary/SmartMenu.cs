@@ -16,100 +16,102 @@ namespace SmartMenuLibrary
 
         public void Activate()
         {
-            string line;
-            int i = 0;
-
-            System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
             Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
 
-            char menuInput = char.Parse(Console.ReadLine());
-           
-            
+            //char menuinput er character input - det som bliver indskrevet
+            char menuInput;
+            menuInput = char.Parse(Console.ReadLine());
+            string line;
+            int counter = 0;
+            char menuInputEN;
+            char menuInputDK;
 
-            if (menuInput == 1)
+            //vælger punkt 1
+            while (menuInput == '1')
             {
-                Console.WriteLine("Du har valgt den danske menu");
-                char menuInputEN = char.Parse(Console.ReadLine());
+                //indlæser engelsk tekstfil med metoder vi lærte i mandags
+                System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
+                while((line = file.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                        counter++;
+                }
+                //herunder vælger den hvad outputtet er alt efter hvad indputtet er
+                menuInputEN = char.Parse(Console.ReadLine());
 
+                //indputtet er 1 og outputter er dothis fra functions - lige nu looper den bare for evigt though lol
+                while (menuInputEN == '1')
+                {
+                     Console.WriteLine(Functions.DoThis());
+                }
+
+                while (menuInputEN == '2')
+                {
+                    Console.WriteLine(Functions.DoThat());
+                }
+
+                while (menuInputEN == '3')
+                {
+                    //den her skal have et string indput for at fungere, derfor er der først defineret en string som læser det som man indtaster 
+                    string doSomethingInput = Console.ReadLine();
+                    Console.WriteLine(Functions.DoSomething(doSomethingInput));
+                }
+
+                while (menuInputEN == '4')
+                {
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+                }
+
+                while (menuInputEN == '0')
+                {
+                    //afslutter programmet
+                    Environment.Exit(0);
+                }
+            }
+
+            //præcis det samme som øverst, bare repeat på dansk
+            while (menuInput == '2')
+            {
+                System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
-                    i++;
+                    counter++;
+                }
+                menuInputDK = char.Parse(Console.ReadLine());
+
+                while (menuInputDK == '1')
+                {
+                    Console.WriteLine(Functions.DoThis());
                 }
 
-                    if (menuInputEN == 1)
-                    {
-                        Functions.DoThis();
-                    }
+                while (menuInputDK == '2')
+                {
+                    Console.WriteLine(Functions.DoThat());
+                }
 
-                    if (menuInputEN == 2)
-                    {
-                        Functions.DoThat();
-                    }
+                while (menuInputDK == '3')
+                {
+                    string doSomethingInput = Console.ReadLine();
+                    Console.WriteLine(Functions.DoSomething(doSomethingInput));
+                }
 
-                    if (menuInputEN == 3)
-                    {
-                        string doSomethingInput = Console.ReadLine();
-                        Functions.DoSomething(doSomethingInput);
-                    }
+                while (menuInputDK == '4')
+                {
+                    Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+                }
 
-                    if (menuInputEN == 4)
-                    {
-                        Functions.GetTheAnswerToLifeTheUniverseAndEverything();
-                    }
+                while (menuInputDK == '0')
+                {
+                    Environment.Exit(0);
+                }
+            
 
-                    if (menuInputEN == 0)
-                    {
-                        Environment.Exit(0);
-                    }
-                    Console.ReadLine();
-                
-
-
+            while (menuInput == '0')
+                {
+                    Environment.Exit(0);
+                }
             }
-
-
-            //while (menuInput == 2)
-            //{
-            //    System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
-            //    while ((line = file.ReadLine()) != null)
-            //    {
-            //        Console.WriteLine(line);
-            //        counter++;
-            //    }
-
-            //    while (menuInputDK == 1)
-            //    {
-            //        Functions.DoThis();
-            //    }
-
-            //    while (menuInputDK == 2)
-            //    {
-            //        Functions.DoThat();
-            //    }
-
-            //    while (menuInputDK == 3)
-            //    {
-            //        string doSomethingInput = Console.ReadLine();
-            //        Functions.DoSomething(doSomethingInput);
-            //    }
-
-            //    while (menuInputDK == 4)
-            //    {
-            //        Functions.GetTheAnswerToLifeTheUniverseAndEverything();
-            //    }
-
-            //    while (menuInputDK == 0)
-            //    {
-            //        Environment.Exit(0);
-            //    }
-
-
-            //while (menuInput == 0)
-            //    {
-            //        Environment.Exit(0);
-            //    }
-            //}
 
 
             //gamle kode som måske kan bruges til noget????
