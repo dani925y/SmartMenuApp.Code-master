@@ -16,94 +16,100 @@ namespace SmartMenuLibrary
 
         public void Activate()
         {
+            string line;
+            int i = 0;
+
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
             Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
 
-            char menuInput;
-            menuInput = char.Parse(Console.ReadLine());
-            string line;
-            int counter = 0;
-            char menuInputEN;
-            menuInputEN = char.Parse(Console.ReadLine());
-            char menuInputDK;
-            menuInputDK= char.Parse(Console.ReadLine());
+            char menuInput = char.Parse(Console.ReadLine());
+           
+            
 
-            while (menuInput == 1)
+            if (menuInput == 1)
             {
-                System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
-                while((line = file.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                        counter++;
-                }
+                Console.WriteLine("Du har valgt den danske menu");
+                char menuInputEN = char.Parse(Console.ReadLine());
 
-                while (menuInputEN == 1)
-                {
-                    Functions.DoThis();
-                }
-
-                while (menuInputEN == 2)
-                {
-                    Functions.DoThat();
-                }
-
-                while (menuInputEN == 3)
-                {
-                    string doSomethingInput = Console.ReadLine();
-                    Functions.DoSomething(doSomethingInput);
-                }
-
-                while (menuInputEN == 4)
-                {
-                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
-                }
-
-                while (menuInputDK == 0)
-                {
-                    Environment.Exit(0);
-                }
-            }
-
-            while (menuInput == 2)
-            {
-                System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
                 while ((line = file.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
-                    counter++;
+                    i++;
                 }
 
-                while (menuInputDK == 1)
-                {
-                    Functions.DoThis();
-                }
+                    if (menuInputEN == 1)
+                    {
+                        Functions.DoThis();
+                    }
 
-                while (menuInputDK == 2)
-                {
-                    Functions.DoThat();
-                }
+                    if (menuInputEN == 2)
+                    {
+                        Functions.DoThat();
+                    }
 
-                while (menuInputDK == 3)
-                {
-                    string doSomethingInput = Console.ReadLine();
-                    Functions.DoSomething(doSomethingInput);
-                }
+                    if (menuInputEN == 3)
+                    {
+                        string doSomethingInput = Console.ReadLine();
+                        Functions.DoSomething(doSomethingInput);
+                    }
 
-                while (menuInputDK == 4)
-                {
-                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
-                }
+                    if (menuInputEN == 4)
+                    {
+                        Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+                    }
 
-                while (menuInputDK == 0)
-                {
-                    Environment.Exit(0);
-                }
-            
+                    if (menuInputEN == 0)
+                    {
+                        Environment.Exit(0);
+                    }
+                    Console.ReadLine();
+                
 
-            while (menuInput == 0)
-                {
-                    Environment.Exit(0);
-                }
+
             }
+
+
+            //while (menuInput == 2)
+            //{
+            //    System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
+            //    while ((line = file.ReadLine()) != null)
+            //    {
+            //        Console.WriteLine(line);
+            //        counter++;
+            //    }
+
+            //    while (menuInputDK == 1)
+            //    {
+            //        Functions.DoThis();
+            //    }
+
+            //    while (menuInputDK == 2)
+            //    {
+            //        Functions.DoThat();
+            //    }
+
+            //    while (menuInputDK == 3)
+            //    {
+            //        string doSomethingInput = Console.ReadLine();
+            //        Functions.DoSomething(doSomethingInput);
+            //    }
+
+            //    while (menuInputDK == 4)
+            //    {
+            //        Functions.GetTheAnswerToLifeTheUniverseAndEverything();
+            //    }
+
+            //    while (menuInputDK == 0)
+            //    {
+            //        Environment.Exit(0);
+            //    }
+
+
+            //while (menuInput == 0)
+            //    {
+            //        Environment.Exit(0);
+            //    }
+            //}
 
 
             //gamle kode som måske kan bruges til noget????
