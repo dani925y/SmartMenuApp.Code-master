@@ -11,19 +11,11 @@ namespace SmartMenuLibrary
     {
         public void LoadMenu(string path)
         {
-            System.IO.StreamReader file =
-            new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
         }
-
-
-
-
         public void Activate()
         {
-            Console.WriteLine("Choose Language/Vælg Sprog");
-            Console.WriteLine("1. Dansk/Danish");
-            Console.WriteLine("2. English/Engelsk");
-            Console.WriteLine("0. Exit");
+            Console.WriteLine("Choose Language/Vælg Sprog - Press 1 for english - Tast 2 for dansk");
             string langChoice = Console.ReadLine();
             switch (langChoice)
             {
