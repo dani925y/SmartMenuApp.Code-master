@@ -17,6 +17,7 @@ namespace SmartMenuLibrary
         public void Activate()
         {
             string line;
+            // string selection = Console.ReadLine();
             int counter = 0;
 
             Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
@@ -29,8 +30,10 @@ namespace SmartMenuLibrary
             menuInput = char.Parse(Console.ReadLine());
 
             //vælger punkt 1
-            if (menuInput == '1')
+            while (menuInput == '1')
             {
+                Console.Clear();
+
                 //indlæser engelsk tekstfil med metoder vi lærte i mandags
                 System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
 
@@ -49,6 +52,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThis());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -56,6 +60,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThat());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -65,6 +70,7 @@ namespace SmartMenuLibrary
                     //den her skal have et string indput for at fungere, derfor er der først defineret en string som læser det som man indtaster 
                     string doSomethingInput = Console.ReadLine();
                     Console.WriteLine(Functions.DoSomething(doSomethingInput));
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -72,7 +78,14 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
+                }
+                if (menuInputEN == '5')
+                {
+                    Console.Clear();
+                    Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
+                    menuInput = char.Parse(Console.ReadLine());
                 }
 
                 if (menuInputEN == '0')
@@ -80,13 +93,15 @@ namespace SmartMenuLibrary
                     Console.Clear();
                     //afslutter programmet
                     Environment.Exit(0);
-                    Console.ReadLine();
                 }
+
+
             }
 
             //præcis det samme som øverst, bare repeat på dansk
-            if (menuInput == '2')
+            while (menuInput == '2')
             {
+                Console.Clear();
                 System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpecDA.txt");
 
                 while ((line = file.ReadLine()) != null)
@@ -101,6 +116,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThis());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -108,6 +124,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThat());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -116,6 +133,7 @@ namespace SmartMenuLibrary
                     Console.Clear();
                     string doSomethingInput = Console.ReadLine();
                     Console.WriteLine(Functions.DoSomething(doSomethingInput));
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
                 }
 
@@ -123,23 +141,26 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
+                    Console.WriteLine("press 5 to go back");
                     Console.ReadLine();
+                }
+
+                if (menuInputDK == '5')
+                {
+                    Console.Clear();
+                    Console.WriteLine("For english press 1 and enter - for dansk tryk 2 og enter - 0 for exit ");
+                    menuInput = char.Parse(Console.ReadLine());
                 }
 
                 if (menuInputDK == '0')
                 {
                     Console.Clear();
                     Environment.Exit(0);
-                    Console.ReadLine();
                 }
 
 
-                if (menuInput == '0')
-                {
-                    Console.Clear();
-                    Environment.Exit(0);
-                    Console.ReadLine();
-                }
+
+
             }
 
 
