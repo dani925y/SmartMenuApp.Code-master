@@ -1,6 +1,8 @@
-﻿<Menu valg>
-<Vælg menu punkt>
-<Punkt 1>;<1>
-<Punkt 2>;<2>
-<Punkt 3>;<3>
-<Punkt 4>;<4>
+﻿Menu titel
+This is our menu and what it does xd
+	1. Do This
+	2. Do That
+	3. Do Something
+	4. Get the answer to Life, the Universe and Everything
+
+(Press Menu number or 0 to exit)

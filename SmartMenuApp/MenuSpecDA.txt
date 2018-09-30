@@ -1,0 +1,8 @@
+﻿Menu titel
+Det her er hvad vores menu indeholder og gør xd
+	1. Goer dette
+	2. Goer hint
+	3. Goer noget
+	4. Faa svaret paa livet, universet og alting
+
+(Tryk menupunkt eller 0 for at afslutte)
