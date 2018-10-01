@@ -5,4 +5,4 @@ This is our menu and what it does xd
 	3. Do Something
 	4. Get the answer to Life, the Universe and Everything
 
-(Press Menu number or 0 to exit)
+(Enter Menu number, press 5 to choose langueage or 0 to exit)

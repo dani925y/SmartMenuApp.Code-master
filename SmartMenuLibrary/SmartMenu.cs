@@ -33,7 +33,6 @@ namespace SmartMenuLibrary
             while (menuInput == '1')
             {
                 Console.Clear();
-
                 //indlæser engelsk tekstfil med metoder vi lærte i mandags
                 System.IO.StreamReader file = new System.IO.StreamReader(@"C:..\..\MenuSpec.txt");
 
@@ -52,7 +51,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThis());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nPress enter to go back");
                     Console.ReadLine();
                 }
 
@@ -60,17 +59,18 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThat());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nPress enter to go back");
                     Console.ReadLine();
                 }
 
                 if (menuInputEN == '3')
                 {
                     Console.Clear();
-                    //den her skal have et string indput for at fungere, derfor er der først defineret en string som læser det som man indtaster 
+                    //den her skal have et string indput for at fungere, derfor er der først defineret en string som læser det som man indtaster
+                    Console.WriteLine("Do something");
                     string doSomethingInput = Console.ReadLine();
                     Console.WriteLine(Functions.DoSomething(doSomethingInput));
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nPress enter to go back");
                     Console.ReadLine();
                 }
 
@@ -78,7 +78,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nPress enter to go back");
                     Console.ReadLine();
                 }
                 if (menuInputEN == '5')
@@ -94,8 +94,6 @@ namespace SmartMenuLibrary
                     //afslutter programmet
                     Environment.Exit(0);
                 }
-
-
             }
 
             //præcis det samme som øverst, bare repeat på dansk
@@ -116,7 +114,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThis());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nTryk enter for at gå tilbage");
                     Console.ReadLine();
                 }
 
@@ -124,16 +122,17 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.DoThat());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nTryk enter for at gå tilbage");
                     Console.ReadLine();
                 }
 
                 if (menuInputDK == '3')
                 {
                     Console.Clear();
+                    Console.WriteLine("Gør noget");
                     string doSomethingInput = Console.ReadLine();
                     Console.WriteLine(Functions.DoSomething(doSomethingInput));
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nTryk enter for at gå tilbage");
                     Console.ReadLine();
                 }
 
@@ -141,7 +140,7 @@ namespace SmartMenuLibrary
                 {
                     Console.Clear();
                     Console.WriteLine(Functions.GetTheAnswerToLifeTheUniverseAndEverything());
-                    Console.WriteLine("press 5 to go back");
+                    Console.WriteLine("\nTryk enter for at gå tilbage");
                     Console.ReadLine();
                 }
 
@@ -157,59 +156,7 @@ namespace SmartMenuLibrary
                     Console.Clear();
                     Environment.Exit(0);
                 }
-
-
-
-
             }
-
-
-            //gamle kode som måske kan bruges til noget????
-            /*Console.WriteLine("Choose Language/Vælg Sprog");
-            Console.WriteLine("1. Dansk/Danish");
-            Console.WriteLine("2. English/Engelsk");
-            Console.WriteLine("0. Exit");
-            string langChoice = Console.ReadLine();
-            switch (langChoice)
-            {
-                case "1":
-                    DanskMenu();
-                    break;
-                case "2":
-                    EnglishMenu();
-                    break;
-                case "0":
-                    return;
-            }
-
-            Console.WriteLine("1. Punkt");
-            Console.WriteLine("2. Punkt");
-            Console.WriteLine("3. Punkt");
-            Console.WriteLine("4. Punkt");
-            Console.WriteLine("5. Tilbage til sporg valg");
-            Console.WriteLine("0. Exit");
-            string menuChoiceDK = Console.ReadLine();
-            switch (menuChoiceDK)
-            {
-                case "1":
-                    Functions.DoThis();
-                    break;
-                case "2":
-                    Functions.DoThat();
-                    break;
-                case "3":
-                    Functions.DoSomething();
-                    break;
-                case "4":
-                    Functions.GetTheAnswerToLifeTheUniverseAndEverything();
-                    break;
-                case "5":
-                    LoadMenu();
-                    break;
-                case "0":
-                    return;
-            }*/
-
         }// Husk at kigge på tekstens farve ændring
     }
 }
