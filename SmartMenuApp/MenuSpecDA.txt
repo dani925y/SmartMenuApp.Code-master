@@ -1,8 +1,8 @@
 ﻿Menu titel
 Det her er hvad vores menu indeholder og gør xd
-	1. Goer dette
-	2. Goer hint
-	3. Goer noget
-	4. Faa svaret paa livet, universet og alting
+	1. Gør dette
+	2. Gør hint
+	3. Gør noget
+	4. Få svaret på livet, universet og alting
 
-(Tryk menupunkt eller 0 for at afslutte)
+(Vælg menupunkt, tryk 5 for sprog valg eller 0 for at afslutte)
